@@ -11,7 +11,7 @@
     "innosetup": true,
     "bin": [
                 "XLaunch.exe",
-                "Xming.exe",
+                "Xming.exe"
     ]
     "shortcuts": [
         [
