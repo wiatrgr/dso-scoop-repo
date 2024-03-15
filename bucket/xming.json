@@ -12,13 +12,14 @@
     "bin": "XLaunch.exe",
 	       "Xming.exe"
 	
-	"shortcuts": [
-    [
-        "XLaunch.exe",
-        "XLaunch"
+    "shortcuts": [
+        [
+            "XLaunch.exe",
+            "XLaunch"
+        ]
+        [
+            "Xming.exe",
+            "Xming"
+        ]
     ],
-    [
-        "Xming.exe",
-        "Xming)"
-    ]
 }
