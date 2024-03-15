@@ -10,4 +10,10 @@
     "hash": "md5:E580DEBBF6110CFC4D8FCD20BEB541C1",
     "innosetup": true,
     "bin": "XLaunch.exe"
+    "shortcuts": [
+        [
+            "XLaunch.exe",
+            "XLaunch"
+        ]
+    ]
 }
