@@ -1,0 +1,44 @@
+{
+    "version": "2.5.0",
+    "homepage": "https://tortoisegit.org/",
+    "license": "https://www.gnu.org/licenses/gpl-2.0",
+    "architecture": {
+        "64bit": {
+            "url": [
+                "https://download.tortoisegit.org/tgit/2.5.0.0/TortoiseGit-2.5.0.0-64bit.msi",
+                "https://download.tortoisegit.org/tgit/2.5.0.0/TortoiseGit-LanguagePack-2.5.0.0-64bit-zh_CN.msi"
+            ]
+        },
+        "32bit": {
+            "url": [
+                "https://download.tortoisegit.org/tgit/2.5.0.0/TortoiseGit-2.5.0.0-32bit.msi",
+                "https://download.tortoisegit.org/tgit/2.5.0.0/TortoiseGit-LanguagePack-2.5.0.0-32bit-zh_CN.msi"
+            ]
+        }
+    },
+    "extract_dir": [
+        "Program Files\\TortoiseGit",
+        "Program Files\\TortoiseGit"
+    ],
+    "env_add_path": "bin",
+    "checkver": {
+        "url": "https://tortoisegit.org/download/",
+        "re": "download.tortoisegit.org/tgit/([\\d\\.]+)/"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": [
+                    "https://download.tortoisegit.org/tgit/$version/TortoiseGit-$version-64bit.msi",
+                    "https://download.tortoisegit.org/tgit/$version/TortoiseGit-LanguagePack-$version-64bit-zh_CN.msi"
+                ]
+            },
+            "32bit": {
+                "url": [
+                    "https://download.tortoisegit.org/tgit/$version/TortoiseGit-$version-32bit.msi",
+                    "https://download.tortoisegit.org/tgit/$version/TortoiseGit-LanguagePack-$version-32bit-zh_CN.msi"
+                ]
+            }
+        }
+    }
+}
