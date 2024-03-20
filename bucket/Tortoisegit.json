@@ -1,38 +1,16 @@
 {
     "version": "2.5.0",
+    "description": "TortoiseGit is a Git revision control client, implemented as a Windows shell extension and based on TortoiseSVN.",
     "homepage": "https://tortoisegit.org/",
     "license": "https://www.gnu.org/licenses/gpl-2.0",
-    "architecture": {
-        "64bit": {
-            "url": "https://download.tortoisegit.org/tgit/2.5.0.0/TortoiseGit-2.5.0.0-64bit.msi",
-        },
-        "32bit": {
-            "url": "https://download.tortoisegit.org/tgit/2.5.0.0/TortoiseGit-2.5.0.0-32bit.msi",
-        }
-    },
-    "env_add_path": "bin",
-    "checkver": {
-        "url": "https://tortoisegit.org/download/",
-        "re": "download.tortoisegit.org/tgit/([\\d\\.]+)/"
-    },
+    "url": "https://download.tortoisegit.org/tgit/2.5.0.0/TortoiseGit-2.5.0.0-64bit.msi",
+    "innosetup": true,
+    "bin": [
+        "XLaunch.exe",
+        "Xming.exe"
+    ],
     "shortcuts": [
-        "Tortoisegit.exe",
-        "Tortoisegit"
-        ],
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": [
-                    "https://download.tortoisegit.org/tgit/$version/TortoiseGit-$version-64bit.msi",
-                    "https://download.tortoisegit.org/tgit/$version/TortoiseGit-LanguagePack-$version-64bit-zh_CN.msi"
-                ]
-            },
-            "32bit": {
-                "url": [
-                    "https://download.tortoisegit.org/tgit/$version/TortoiseGit-$version-32bit.msi",
-                    "https://download.tortoisegit.org/tgit/$version/TortoiseGit-LanguagePack-$version-32bit-zh_CN.msi"
-                ]
-            }
-        }
-    }
+        "XLaunch.exe",
+        "XLaunch"
+    ]
 }
