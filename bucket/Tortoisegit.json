@@ -4,16 +4,10 @@
     "license": "https://www.gnu.org/licenses/gpl-2.0",
     "architecture": {
         "64bit": {
-            "url": [
-                "https://download.tortoisegit.org/tgit/2.5.0.0/TortoiseGit-2.5.0.0-64bit.msi",
-                "https://download.tortoisegit.org/tgit/2.5.0.0/TortoiseGit-LanguagePack-2.5.0.0-64bit-zh_CN.msi"
-            ]
+            "url": "https://download.tortoisegit.org/tgit/2.5.0.0/TortoiseGit-2.5.0.0-64bit.msi",
         },
         "32bit": {
-            "url": [
-                "https://download.tortoisegit.org/tgit/2.5.0.0/TortoiseGit-2.5.0.0-32bit.msi",
-                "https://download.tortoisegit.org/tgit/2.5.0.0/TortoiseGit-LanguagePack-2.5.0.0-32bit-zh_CN.msi"
-            ]
+            "url": "https://download.tortoisegit.org/tgit/2.5.0.0/TortoiseGit-2.5.0.0-32bit.msi",
         }
     },
     "env_add_path": "bin",
