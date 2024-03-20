@@ -16,15 +16,15 @@
             ]
         }
     },
-    "extract_dir": [
-        "Program Files\\TortoiseGit",
-        "Program Files\\TortoiseGit"
-    ],
     "env_add_path": "bin",
     "checkver": {
         "url": "https://tortoisegit.org/download/",
         "re": "download.tortoisegit.org/tgit/([\\d\\.]+)/"
     },
+    "shortcuts": [
+        "Tortoisegit.exe",
+        "Tortoisegit"
+        ],
     "autoupdate": {
         "architecture": {
             "64bit": {
