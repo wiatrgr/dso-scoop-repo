@@ -1,23 +1,46 @@
 {
-    "version": "2022_3425",
-    "description": "A file searching utility for Windows",
-    "homepage": "https://www.myagentsupport.com/agent-ransack",
-    "license": "Freeware",
+    "homepage": "https://www.mythicsoft.com/agentransack/",
+    "license": "unknown",
+    "version": "3425",
     "architecture": {
         "64bit": {
             "url": "https://download.mythicsoft.com/flp/3425/agentransack_inx64_3425.exe",
-            "hash": "46F0CBE955B6782410B6387EF38E8F2E514CD832B9B63DDE267FCBB789B3361A"
+            "hash": "46f0cbe955b6782410b6387ef38e8f2e514cd832b9b63dde267fcbb789b3361a"
         },
         "32bit": {
             "url": "https://download.mythicsoft.com/flp/3425/agentransack_in_3425.exe",
-            "hash": "006ABA6AC9EF821166EEB55BC397A9A4F9BC21DC8913BA568E374787F8519F9C"
+            "hash": "006aba6ac9ef821166eeb55bc397a9a4f9bc21dc8913ba568e374787f8519f9c"
         }
     },
-    "bin": "AgentRansack.exe",
+    "innosetup": true,
+    "bin": [
+        "AgentRansack.exe",
+        "flpsearch.exe"
+    ],
     "shortcuts": [
         [
             "AgentRansack.exe",
-            "AgentRansack"
+            "Agent Ransack"
         ]
-    ]
+    ],
+    "persist": [
+        "config\\config.xml",
+        "config\\flpui.xml",
+        "config\\history.xml",
+        "regkey.xml"
+    ],
+    "checkver": {
+        "url": "https://www.mythicsoft.com/agentransack/download/",
+        "regex": "Build ([\\d.]+)</a>"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://download.mythicsoft.com/flp/$version/agentransack_inx64_$version.exe"
+            },
+            "32bit": {
+                "url": "https://download.mythicsoft.com/flp/$version/agentransack_in_$version.exe"
+            }
+        }
+    }
 }
