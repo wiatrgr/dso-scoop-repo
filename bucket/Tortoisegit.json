@@ -2,15 +2,15 @@
     "homepage": "https://tortoisegit.org/",
     "description": "Windows Shell Interface to Git",
     "license": "GPL-2.0-only",
-    "version": "2.7.0",
+    "version": "2.15.0",
     "architecture": {
         "64bit": {
-            "url": "https://download.tortoisegit.org/tgit/2.7.0.0/TortoiseGit-2.7.0.0-64bit.msi",
-            "hash": "ea4d68423484143de7c2afe75d28eed29ecb695e3b4ad41c47d8365fe70c76bd"
+            "url": "https://download.tortoisegit.org/tgit/2.15.0.0/TortoiseGit-2.15.0.0-64bit.msi",
+            "hash": "481359c8773e1d098b98156ff44f0dd50304e97a866d44e6594c709ec5a61377"
         },
         "32bit": {
-            "url": "https://download.tortoisegit.org/tgit/2.7.0.0/TortoiseGit-2.7.0.0-32bit.msi",
-            "hash": "5c9c734cd5b354f5fdd485793677430a067a629f5019410d65a31e3306a81470"
+            "url": "https://download.tortoisegit.org/tgit/2.15.0.0/TortoiseGit-2.15.0.0-32bit.msi",
+            "hash": "1e818fd4793b4e2130c6ec33b8803006b3b9949d8c2b025e8908f2565b257105"
         }
     },
     "extract_dir": "Program Files\\TortoiseGit",
