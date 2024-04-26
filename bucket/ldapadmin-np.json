@@ -6,11 +6,11 @@
     "architecture": {
         "64bit": {
             "url": "https://scoop-packages.itsmtaxud.priv/packages/ldapadmin/LdapAdminExe-w64-1.8.3.zip",
-            "hash": "sha1:FE51EF68AC8E7C215C5C9E42B70D82FD65DCDBD3"
+            "hash": "md5:91e4fc888456133a09c8d0e5f5f5d896"
         },
         "32bit": {
             "url": "https://scoop-packages.itsmtaxud.priv/packages/ldapadmin/LdapAdminExe-w32-1.8.3.zip",
-            "hash": "sha1:89be0946bc572e34bb0df89cfe3164115544cd13"
+            "hash": "md5:26713722a82d83336229d2ef560d8f9f"
         }
     },
     "bin": "LdapAdmin.exe",
