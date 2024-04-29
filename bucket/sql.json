@@ -1,4 +1,5 @@
-    "version": "23.1.1.345.2114",
+{
+"version": "23.1.1.345.2114",
     "description": "Oracle SQL Developer",
     "homepage": "https://www.oracle.com/database/sqldeveloper/",
     "license": {
