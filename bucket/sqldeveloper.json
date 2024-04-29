@@ -9,9 +9,13 @@
     "url": "https://scoop-packages.itsmtaxud.priv/packages/sqldeveloper/sqldeveloper-23.1.1.345.2114-x64.zip",
     "hash": "md5:3dc07aff110632a9e83189e7e689f279",
     "env_set": {
-      "SQLDEVELOPER_HOME": "C:\\CCN2_DEV_Tools\\sqldeveloper"
+        "SQLDEVELOPER_HOME": "C:\\CCN2_DEV_Tools\\sqldeveloper"
     },
-    "post_install": "Start-Process -FilePath 'C:\\CCN2_DEV_Tools\\sqldeveloper\\sqldeveloper.exe' -Verb runas",
+    "post_install": [
+        "Expand-Archive -Path \"$env:SQLDEVELOPER_HOME\\sqldeveloper-*.zip\" -DestinationPath \"$env:SQLDEVELOPER_HOME\\sqldeveloper\"",
+        "Remove-Item -Path \"$env:SQLDEVELOPER_HOME\\sqldeveloper-*.zip\" -Force",
+        "Start-Process -FilePath \"$env:SQLDEVELOPER_HOME\\sqldeveloper\\sqldeveloper.exe\" -Verb runas"
+    ],
     "shortcuts": [
         [
             "sqldeveloper.exe",
@@ -19,4 +23,3 @@
         ]
     ]
 }
-
