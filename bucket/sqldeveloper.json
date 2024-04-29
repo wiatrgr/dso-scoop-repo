@@ -10,6 +10,6 @@
   },
   "bin": "sqldeveloper.exe",
   "shortcuts": {
-    "SQLDeveloper.lnk": "sqldeveloper.exe",
+    "SQLDeveloper.lnk": "sqldeveloper.exe"
   }
 }
