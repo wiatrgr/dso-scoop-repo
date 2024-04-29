@@ -7,7 +7,6 @@
         "url": "https://docs.oracle.com/en/database/oracle/sql-developer/index.html"
     },
     "architecture": {
-        "64bit": {
             "url": "https://scoop-packages.itsmtaxud.priv/packages/sqldeveloper/sqldeveloper-23.1.1.345.2114-x64.zip",
             "hash": "md5:3dc07aff110632a9e83189e7e689f279"
         },
@@ -24,10 +23,6 @@
         "regex": "sqldeveloper-([\\d.]+)\\.zip"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
                 "url": "https://scoop-packages.itsmtaxud.priv/packages/sqldeveloper/sqldeveloper-$version.zip",
-            },
-        }
     }
 }
