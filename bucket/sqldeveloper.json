@@ -11,9 +11,7 @@
     "env_set": {
       "SQLDEVELOPER_HOME": "C:\\CCN2_DEV_Tools\\sqldeveloper"
     },
-    "post_install": [
-      "Start-Process -FilePath 'C:\\CCN2_DEV_Tools\\sqldeveloper\\sqldeveloper.exe' -Verb runas"
-    ]
+    "post_install": "Start-Process -FilePath 'C:\\CCN2_DEV_Tools\\sqldeveloper\\sqldeveloper.exe' -Verb runas"
     "shortcuts": [
         [
             "sqldeveloper.exe",
