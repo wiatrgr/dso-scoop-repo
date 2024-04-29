@@ -22,7 +22,7 @@
         ]
     ],
     "post_install": [
-        "cmd /c mklink /D \"C:\\CCN2_DEV_Tools\\sqldeveloper\" \"C:\\ProgramData\\scoop\\apps\\sqldeveloper\\current\""
+        "cmd /c mklink /D \"C:\\CCN2_DEV_Tools\\sqldeveloper\\current\" \"C:\\ProgramData\\scoop\\apps\\sqldeveloper\\current\""
     ],
     "checkver": {
         "url": "https://scoop-packages.itsmtaxud.priv/packages/sqldeveloper/",
