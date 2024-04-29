@@ -11,5 +11,5 @@
   "bin": "sqldeveloper.exe",
   "shortcuts": {
     "SQLDeveloper.lnk": "sqldeveloper.exe"
-  }
+  },
 }
