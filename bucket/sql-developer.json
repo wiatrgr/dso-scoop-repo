@@ -1,33 +1,37 @@
 {
-	"homepage": "http://www.oracle.com/technetwork/developer-tools/sql-developer/index.html",
-	"version": "18.1.0.095.1630",
-	"license": "http://www.oracle.com/technetwork/licenses/sqldev-license-152021.html",
-	"url": "http://download.oracle.com/otn/java/sqldeveloper/sqldeveloper-18.1.0.095.1630-no-jre.zip",
-	"cookie": {
-		"oraclelicense": "accept-securebackup-cookie"
-	},
-	"extract_dir": "sqldeveloper",
-	"bin": [
-		[
-			"sqldeveloper.exe",
-			"sqldeveloper"
-		]
-	],
-	"shortcuts": [
-		[
-			"sqldeveloper.exe",
-			"SQL Developer"
-		]
-	],
-	"checkver": {
-		"url": "http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html",
-		"re": "Version ([\\d.]+)"
-	},
-	"autoupdate": {
-		"url": "http://download.oracle.com/otn/java/sqldeveloper/sqldeveloper-$version-no-jre.zip",
-		"extract_dir": "sqldeveloper",
-		"hash": {
-			"url": "$url.sha256"
-		}
-	}
+    "version": "1.8.3",
+    "description": "An LDAP client and administration tool for LDAP directory management.",
+    "homepage": "http://ldapadmin.org/",
+    "license": "GPL-2.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://scoop-packages.itsmtaxud.priv/packages/ldapadmin/LdapAdminExe-w64-1.8.3.zip",
+            "hash": "md5:91e4fc888456133a09c8d0e5f5f5d896"
+        },
+        "32bit": {
+            "url": "https://scoop-packages.itsmtaxud.priv/packages/ldapadmin/LdapAdminExe-w32-1.8.3.zip",
+            "hash": "md5:26713722a82d83336229d2ef560d8f9f"
+        }
+    },
+    "bin": "LdapAdmin.exe",
+    "shortcuts": [
+        [
+            "LdapAdmin.exe",
+            "LDAP Admin"
+        ]
+    ],
+    "checkver": {
+        "url": "https://scoop-packages.itsmtaxud.priv/packages/ldapadmin/",
+        "regex": "LdapAdminExe-w32-([\\d.]+)\\.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://scoop-packages.itsmtaxud.priv/packages/ldapadmin/LdapAdminExe-w64-$version.zip"
+            },
+            "32bit": {
+                "url": "https://scoop-packages.itsmtaxud.priv/packages/ldapadmin/LdapAdminExe-w32-$version.zip"
+            }
+        }
+    }
 }
