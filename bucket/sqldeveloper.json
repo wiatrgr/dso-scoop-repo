@@ -21,6 +21,6 @@
         "regex": "sqldeveloper-([\\d.]+)\\.zip"
     },
     "autoupdate": {
-                "url": "https://scoop-packages.itsmtaxud.priv/packages/sqldeveloper/sqldeveloper-$version.zip",
+                "url": "https://scoop-packages.itsmtaxud.priv/packages/sqldeveloper/sqldeveloper-$version.zip"
     }
 }
