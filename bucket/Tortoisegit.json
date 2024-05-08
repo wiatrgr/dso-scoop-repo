@@ -1,14 +1,14 @@
 {
-    "version": "2.5.0",
+    "version": "2.16.0",
     "homepage": "https://tortoisegit.org/",
     "license": "https://www.gnu.org/licenses/gpl-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://download.tortoisegit.org/tgit/2.5.0.0/TortoiseGit-2.5.0.0-64bit.msi",
+            "url": "https://download.tortoisegit.org/tgit/2.16.0/TortoiseGit-2.16.0-64bit.msi",
             "hash": "md5:08f9e377ad2c491e1bdcbd66db25679f"
         },
         "32bit": {
-            "url": "https://download.tortoisegit.org/tgit/2.5.0.0/TortoiseGit-2.5.0.0-32bit.msi",
+            "url": "https://download.tortoisegit.org/tgit/2.16.0/TortoiseGit-2.16.0-32bit.msi",
             "hash": "md5:76f6559bb993cf82558de063beb14aab"
         }
     },
