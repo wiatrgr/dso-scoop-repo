@@ -17,6 +17,38 @@
         "Program Files\\TortoiseGit"
     ],
     "env_add_path": "bin",
+    "bin": [
+        "bin\\TortoiseGitMerge.exe",
+        "bin\\TortoiseGitIDiff.exe",
+        "bin\\TortoiseGitBlame.exe",
+        "bin\\TortoiseGitProc.exe" /command:rtfm",
+        "bin\\TortoiseGitProc.exe" /command:settings",
+    ],
+    "shortcuts": [
+        [
+            "TortoiseGitMerge.exe",
+            "TortoiseGitMerge"
+        ]
+        [
+            "TortoiseGitIDiff.exe",
+            "TortoiseGitIDiff"
+        ]        
+        [
+            "TortoiseGitBlame.exe",
+            "TortoiseGitBlame"
+        ]        
+        [
+            "TortoiseGitProc.exe" /command:rtfm",
+            "TortoiseGit"
+        ]        
+        [
+            "TortoiseGitProc.exe" /command:settings",
+            "Settings"
+        ]
+    ],
+    "post_install": [
+          [Environment]::SetEnvironmentVariable("GIT_INSTALL_ROOT", "C:\ProgramData\scoop\apps\git\current\bin", "Machine"),
+    ]    
     "checkver": {
         "url": "https://tortoisegit.org/download/",
         "re": "download.tortoisegit.org/tgit/([\\d\\.]+)/"
