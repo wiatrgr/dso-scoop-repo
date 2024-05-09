@@ -12,17 +12,12 @@
             "hash": "md5:a13b4c40f1eaca16dfacb69853e942a0"
         }
     },
-    "extract_dir": [
-        "Program Files\\TortoiseGit",
-        "Program Files\\TortoiseGit"
-    ],
-    "env_add_path": "bin",
     "bin": [
-        "TortoiseGitMerge.exe",
-        "TortoiseGitIDiff.exe",
-        "TortoiseGitBlame.exe",
-        "TortoiseGitProc.exe //command:rtfm",
-        "TortoiseGitProc.exe //command:settings"
+        "bin\\TortoiseGitMerge.exe",
+        "bin\\TortoiseGitIDiff.exe",
+        "bin\\TortoiseGitBlame.exe",
+        "bin\\TortoiseGitProc.exe //command:rtfm",
+        "bin\\TortoiseGitProc.exe //command:settings"
     ],
     "shortcuts": [
         [
