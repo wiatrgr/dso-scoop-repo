@@ -37,7 +37,7 @@
             "TortoiseGit"
         ],
         [
-            "TortoiseGitProc.exe" /command:settings",
+            "TortoiseGitProc.exe /command:settings",
             "Settings"
         ]
     ],
