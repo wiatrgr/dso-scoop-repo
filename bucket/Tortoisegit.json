@@ -17,13 +17,6 @@
         "Program Files\\TortoiseGit"
     ],
     "env_add_path": "bin",
-    "bin": [
-        "bin\\TortoiseGitMerge.exe",
-        "bin\\TortoiseGitIDiff.exe",
-        "bin\\TortoiseGitBlame.exe",
-        "bin\\TortoiseGitProc.exe //command:rtfm",
-        "bin\\TortoiseGitProc.exe //command:settings"
-    ],
     "shortcuts": [
         [
             "TortoiseGitMerge.exe",
