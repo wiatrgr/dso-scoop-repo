@@ -4,19 +4,46 @@
     "license": "https://www.gnu.org/licenses/gpl-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://scoop-packages.itsmtaxud.priv/packages/tortoisegit/TortoiseGit-2.16.0.0-64bit.msi",
-            "hash": "md5:6c4f86fac60a9ef581dbc9bd7f4d05bc"
+            "url": "https://scoop-packages.itsmtaxud.priv/packages/tortoisegit/TortoiseGit-2.16.0.0-64bit.zip",
+            "hash": "md5:b2d5bd13264e6d688f7ef992db304103"
         },
         "32bit": {
             "url": "https://scoop-packages.itsmtaxud.priv/packages/tortoisegit/TortoiseGit-2.16.0.0-32bit.msi",
             "hash": "md5:a13b4c40f1eaca16dfacb69853e942a0"
         }
     },
-    "extract_dir": [
-        "Program Files\\TortoiseGit",
-        "Program Files\\TortoiseGit"
+    "bin": [
+        "bin\\TortoiseGitMerge.exe",
+        "bin\\TortoiseGitIDiff.exe",
+        "bin\\TortoiseGitBlame.exe",
+        "bin\\TortoiseGitProc.exe //command:rtfm",
+        "bin\\TortoiseGitProc.exe //command:settings"
     ],
-    "env_add_path": "bin",
+    "shortcuts": [
+        [
+            "TortoiseGitMerge.exe",
+            "TortoiseGitMerge"
+        ],
+        [
+            "TortoiseGitIDiff.exe",
+            "TortoiseGitIDiff"
+        ],
+        [
+            "TortoiseGitBlame.exe",
+            "TortoiseGitBlame"
+        ],
+        [
+            "TortoiseGitProc.exe //command:rtfm",
+            "TortoiseGit"
+        ],
+        [
+            "TortoiseGitProc.exe //command:settings",
+            "Settings"
+        ]
+    ],
+    "post_install": [
+        "[Environment]::SetEnvironmentVariable(\"GIT_INSTALL_ROOT\", \"C:\\ProgramData\\scoop\\apps\\git\\current\bin\", \"Machine\")"
+    ],
     "checkver": {
         "url": "https://scoop-packages.itsmtaxud.priv/packages/tortoisegit/"
     },
