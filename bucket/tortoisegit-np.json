@@ -51,6 +51,7 @@
     ],
     "post_uninstall": [
     "$shortcutPath = \"$env:ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\TortoiseGit Settings.lnk\"",
+    "Remove-Item -Path $shortcutPath -Force -ErrorAction SilentlyContinue",
     "$shortcutPath = \"$env:ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\TortoiseGit.lnk\"",
     "Remove-Item -Path $shortcutPath -Force -ErrorAction SilentlyContinue"
     ],
