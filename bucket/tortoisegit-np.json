@@ -34,12 +34,19 @@
     ],
     "post_install": [
             "[Environment]::SetEnvironmentVariable(\"GIT_INSTALL_ROOT\", \"C:\\ProgramData\\scoop\\apps\\git\\current\bin\", \"Machine\")",
-            "$shortcutPath = \"$env:ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\TortoiseGit Settings.lnk\"",
+            "$shortcutPath = \"$env:ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\TortoiseGit Settings.lnk\"",
             "$targetPath = \"$env:ProgramData\\scoop\\apps\\tortoisegit-np\\current\\bin\\TortoiseGitProc.exe\"",
             "$WScriptShell = New-Object -ComObject WScript.Shell",
             "$shortcut = $WScriptShell.CreateShortcut($shortcutPath)",
             "$shortcut.TargetPath = $targetPath",
             "$shortcut.Arguments = '/command:settings'",
+            "$shortcut.Save()"
+            "$shortcutPath = \"$env:ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\TortoiseGit.lnk\"",
+            "$targetPath = \"$env:ProgramData\\scoop\\apps\\tortoisegit-np\\current\\bin\\TortoiseGitProc.exe\"",
+            "$WScriptShell = New-Object -ComObject WScript.Shell",
+            "$shortcut = $WScriptShell.CreateShortcut($shortcutPath)",
+            "$shortcut.TargetPath = $targetPath",
+            "$shortcut.Arguments = '/command:rtfm'",
             "$shortcut.Save()"
     ],
     "checkver": {
