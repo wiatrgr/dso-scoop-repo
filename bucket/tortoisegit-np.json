@@ -41,8 +41,6 @@
             "$shortcut.TargetPath = $targetPath",
             "$shortcut.Arguments = '/command:settings'",
             "$shortcut.Save()"
-],
-
     ],
     "checkver": {
         "url": "https://scoop-packages.itsmtaxud.priv/packages/tortoisegit/"
