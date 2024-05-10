@@ -13,13 +13,28 @@
         }
     },
     "bin": [
+        "bin\\TortoiseGitMerge.exe",
+        "bin\\TortoiseGitIDiff.exe",
+        "bin\\TortoiseGitBlame.exe",
         "bin\\TortoiseGitProc.exe"
     ],
     "shortcuts": [
         [
-            "bin\\TortoiseGitProc.exe",
+            "TortoiseGitMerge.exe",
+            "TortoiseGitMerge"
+        ],
+        [
+            "TortoiseGitIDiff.exe",
+            "TortoiseGitIDiff"
+        ],
+        [
+            "TortoiseGitBlame.exe",
+            "TortoiseGitBlame"
+        ],
+        [
+            "TortoiseGitProc.exe",
             "TortoiseGit"
-        ]
+        ],
     ],
     "post_install": [
         "[Environment]::SetEnvironmentVariable(\"GIT_INSTALL_ROOT\", \"C:\\ProgramData\\scoop\\apps\\git\\current\bin\", \"Machine\")"
