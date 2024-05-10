@@ -16,7 +16,7 @@
         "bin\\TortoiseGitMerge.exe",
         "bin\\TortoiseGitIDiff.exe",
         "bin\\TortoiseGitBlame.exe",
-        "bin\\TortoiseGitProc.exe
+        "bin\\TortoiseGitProc.exe"
     ],
     "shortcuts": [
         [
