@@ -40,7 +40,7 @@
             "$shortcut = $WScriptShell.CreateShortcut($shortcutPath)",
             "$shortcut.TargetPath = $targetPath",
             "$shortcut.Arguments = '/command:settings'",
-            "$shortcut.Save()"
+            "$shortcut.Save()",
             "$shortcutPath = \"$env:ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\TortoiseGit.lnk\"",
             "$targetPath = \"$env:ProgramData\\scoop\\apps\\tortoisegit-np\\current\\bin\\TortoiseGitProc.exe\"",
             "$WScriptShell = New-Object -ComObject WScript.Shell",
