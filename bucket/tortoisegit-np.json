@@ -17,7 +17,7 @@
     ],
     "shortcuts": [
         [
-            "TortoiseGitProc.exe",
+            "bin\\TortoiseGitProc.exe",
             "TortoiseGit"
         ]
     ],
