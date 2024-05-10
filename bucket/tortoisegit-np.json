@@ -17,7 +17,7 @@
     ],
     "shortcuts": [
         [
-            "TortoiseGitProc.exe /command:rtfm",
+            "TortoiseGitProc.exe",
             "TortoiseGit"
         ]
     ],
