@@ -5,7 +5,7 @@
     "architecture": {
         "64bit": {
             "url": "https://scoop-packages.itsmtaxud.priv/packages/tortoisegit/TortoiseGit-2.16.0.0-64bit.msi",
-            "hash": "md5:6c4f86fac60a9ef581dbc9bd7f4d05bc"
+            "hash": "md5:6C4F86FAC60A9EF581DBC9BD7F4D05BC",
             "extract_dir": "tortgit"
         },
         "32bit": {
