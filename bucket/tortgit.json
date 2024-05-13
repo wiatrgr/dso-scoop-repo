@@ -24,7 +24,19 @@
     "Invoke-WebRequest -Uri $url -OutFile $msiFile",
     "Start-Process msiexec.exe -ArgumentList \"/i $msiFile /quiet /norestart\"",
     "Remove-Item $msiFile"
-],
+    ],
+    "post_install": [
+    "$installDir = \"$dir\"",
+    "$installRoot = $installDir.Replace('\\', '\\\\')",
+    "'install-context.reg', 'uninstall-context.reg' | ForEach-Object {",
+    "    $content = Get-Content \"$bucketsdir\\dso-scoop-repo\\scripts\\tortoisegit\\$_\"",
+    "    $content = $content.Replace('$tortoisegit_root', $installRoot)",
+    "    if ($global) {",
+    "       $content = $content.Replace('HKEY_CURRENT_USER', 'HKEY_LOCAL_MACHINE')",
+    "    }",
+    "    Set-Content \"$installDir\\$_\" $content -Encoding Ascii",
+    "}"
+    ],
     "checkver": {
         "url": "https://scoop-packages.itsmtaxud.priv/packages/tortoisegit/"
     },
