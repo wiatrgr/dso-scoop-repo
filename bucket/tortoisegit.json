@@ -16,7 +16,7 @@
     },
     "pre_install": [
     "$installDir = \"$env:ProgramData\\scoop\\apps\\tortoisegit\\current\"",
-    "$url = \https://scoop-packages.itsmtaxud.priv/packages/tortoisegit/TortoiseGit-2.16.0.0-64bit.msi\"",
+    "$url = \"https://scoop-packages.itsmtaxud.priv/packages/tortoisegit/TortoiseGit-2.16.0.0-64bit.msi\"",
     "$msiFile = Join-Path $env:TEMP 'TortoiseGit-$version-64bit.msi'",
     "Invoke-WebRequest -Uri $url -OutFile $msiFile",
     "Start-Process msiexec.exe -ArgumentList \"/i $msiFile /quiet /norestart\"",
