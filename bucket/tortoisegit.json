@@ -17,10 +17,6 @@
         "Program Files\\TortoiseGit"
     ],
     "pre_install": [
-    "$installDir = \"$env:ProgramData\\scoop\\apps\\tortoisegit\\current\"",
-    "$msiFile = Join-Path $env:TEMP 'tortoisegit.msi'",
-    "Start-Process msiexec.exe -ArgumentList \"/i $msiFile /quiet /norestart\"",
-    "Remove-Item $msiFile",
     "[Environment]::SetEnvironmentVariable(\"GIT_INSTALL_ROOT\", \"C:\\ProgramData\\scoop\\apps\\git\\current\bin\", \"Machine\")",
     "$shortcutPath = \"$env:ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\TortoiseGit Settings.lnk\"",
     "$targetPath = \"$env:ProgramData\\scoop\\apps\\tortoisegit\\current\\bin\\TortoiseGitProc.exe\"",
