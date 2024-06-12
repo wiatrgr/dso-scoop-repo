@@ -1,5 +1,5 @@
 {
-    "version": "1.8.0.0",  // Zmień na aktualną wersję
+    "version": "1.8.0",
     "description": "mTPutty is a multi-tabbed PuTTY.",
     "homepage": "https://ttyplus.com/multi-tabbed-putty/",
     "license": "Freeware",
