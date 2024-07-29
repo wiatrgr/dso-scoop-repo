@@ -19,7 +19,7 @@
             "MQExplorer.exe",
             "MQExplorer"
         ]
-    ]
+    ],
        "persist": "winscp.ini",
     "checkver": {
         "url": "",
