@@ -20,7 +20,7 @@
             "MQExplorer"
         ]
     ],
-       "persist": "winscp.ini",
+    "persist": "winscp.ini",
     "checkver": {
         "url": "",
         "regex": ""
@@ -30,4 +30,6 @@
         "hash": {
             "url": "",
             "regex": "(?sm)$basename.*?SHA-256: $sha256"
+        }
+    }
 }
