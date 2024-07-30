@@ -9,7 +9,7 @@
             "hash": "sha256:cea82fee2b770014f5e0271bda9af38e9980400ddc2b02488762ccc4f0070add",
             "installer": {
                 "script": [
-                    "Invoke-ExternalCommand -FilePath \"$dir\\Setup.exe\" -ArgumentList \"-f silent_install.resp\" -RunAs | Out-Null"
+                    "Invoke-ExternalCommand -FilePath \"$dir\\MQExplorer\\Setup.exe\" -ArgumentList \"-f silent_install.resp\" -RunAs | Out-Null"
                 ]
             }
         }
