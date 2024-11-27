@@ -17,6 +17,16 @@
         "nessuscli.exe",
         "nessusd.exe"
     ],
+    "shortcuts": [
+        [
+            "nessuscli.exe",
+            "Nessus CLI"
+        ],
+        [
+            "nessusd.exe",
+            "Nessus Daemon"
+        ]
+    ],
     "checkver": {
         "url": "https://scoop-packages.itsmtaxud.priv/packages/nessus_agent/",
         "re": "Download nessus_agent ([\\d.]+)"
