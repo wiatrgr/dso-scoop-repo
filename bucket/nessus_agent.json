@@ -12,7 +12,6 @@
             "hash": "md5:7e464c28a523fcc8eee651fc2aabb1ad"
         }
     },
-    "extract_dir": "Program Files\\Tenable\\Nessus Agent",
     "bin": [
         "nessuscli.exe",
         "nessusd.exe"
