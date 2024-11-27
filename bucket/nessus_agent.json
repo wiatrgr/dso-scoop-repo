@@ -2,10 +2,7 @@
     "version": "10.8.1",
     "description": "Tenable Nessus Agent - Lightweight agent for vulnerability management.",
     "homepage": "https://www.tenable.com/products/nessus/nessus-agent",
-    "license": {
-        "name": "Proprietary",
-        "url": "https://www.tenable.com/licenses"
-    },
+    "license": "Proprietary",
     "architecture": {
         "64bit": {
             "url": "https://scoop-packages.itsmtaxud.priv/packages/nessus_agent/NessusAgent-10.8.1-x64.msi",
