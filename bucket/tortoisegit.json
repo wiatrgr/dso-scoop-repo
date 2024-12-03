@@ -4,12 +4,12 @@
     "license": "https://www.gnu.org/licenses/gpl-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://download.tortoisegit.org/tgit/2.16.0.0/TortoiseGit-2.16.0.0-64bit.msi",
-            "hash": "md5:6C4F86FAC60A9EF581DBC9BD7F4D05BC"
+            "url": "hhttps://download.tortoisegit.org/tgit/2.17.0.0/TortoiseGit-2.17.0.2-64bit.msi",
+            "hash": "md5:51b4f481bdaea225388d4d4f521b3c7c"
         },
         "32bit": {
-            "url": "https://download.tortoisegit.org/tgit/2.16.0.0/TortoiseGit-2.16.0.0-32bit.msi",
-            "hash": "md5:A13B4C40F1EACA16DFACB69853E942A0"
+            "url": "https://download.tortoisegit.org/tgit/2.17.0.0/TortoiseGit-2.17.0.2-32bit.msi",
+            "hash": "md5:5ed6796e80e86d21311ee2c5eb655fc1"
         }
     },
     "extract_dir": [
