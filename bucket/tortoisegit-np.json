@@ -5,11 +5,11 @@
     "architecture": {
         "64bit": {
             "url": "https://scoop-packages.itsmtaxud.priv/packages/tortoisegit/TortoiseGit-2.16.0.0-64bit.zip",
-            "hash": "md5:b2d5bd13264e6d688f7ef992db304103"
+            "hash": "66ca43f34e1beefc50df67335d8cbf75f29ae5bad66e678fa673f40f53649961"
         },
         "32bit": {
             "url": "https://scoop-packages.itsmtaxud.priv/packages/tortoisegit/TortoiseGit-2.16.0.0-32bit.msi",
-            "hash": "md5:a13b4c40f1eaca16dfacb69853e942a0"
+            "hash": "f90d42d5730befcd2680b5cd89c6037be1f3f8f5f459b33f83704883dd561b19"
         }
     },
     "post_install": [
