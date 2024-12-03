@@ -72,7 +72,7 @@
     "Remove-Item -Path $shortcutPath -Force -ErrorAction SilentlyContinue"
     ],
     "checkver": {
-        "url": "https://download.tortoisegit.org/"
+        "url": "https://download.tortoisegit.org/tgit/"
     },
     "autoupdate": {
         "architecture": {
