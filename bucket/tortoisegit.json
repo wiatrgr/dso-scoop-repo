@@ -31,7 +31,10 @@
         "$shortcut = $WScriptShell.CreateShortcut($shortcutPath)",
         "$shortcut.TargetPath = $targetPath",
         "$shortcut.Arguments = '/command:rtfm'",
-        "$shortcut.Save()"
+        "$shortcut.Save()",
+        "$msiPath = \"$dir\\TortoiseGit-2.17.0.2-64bit.msi\"",
+        "$installArgs = \"/quiet /norestart\"",
+        "Start-Process msiexec.exe -ArgumentList \"/i\", $msiPath, $installArgs -Wait"
     ],
     "bin": [
         "bin\\TortoiseGitMerge.exe",
