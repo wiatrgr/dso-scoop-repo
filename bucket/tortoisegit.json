@@ -73,7 +73,7 @@
     ],
     "checkver": {
         "url": "https://download.tortoisegit.org/tgit/",
-        "regex": "href=\"([\\d.]+)/\""
+        "regex": "href=\"([\\d.]+)/TortoiseGit-([\\d.]+)-64bit\\.msi\""
     },
     "autoupdate": {
         "architecture": {
