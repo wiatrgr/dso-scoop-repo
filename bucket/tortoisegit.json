@@ -5,7 +5,7 @@
     "architecture": {
         "64bit": {
             "url": "https://download.tortoisegit.org/tgit/2.17.0.0/TortoiseGit-2.17.0.2-64bit.msi",
-            "hash": "66CA43F34E1BEEFC50DF67335D8CBF75F29AE5BAD66E678FA673F40F53649961"
+            "hash": "fc5b291a7c901d177cd28b7114fe4a8a8af9502124d49a2de86a14b1b37035c5"
         },
         "32bit": {
             "url": "https://download.tortoisegit.org/tgit/2.17.0.0/TortoiseGit-2.17.0.2-32bit.msi",
