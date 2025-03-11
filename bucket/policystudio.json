@@ -41,9 +41,6 @@
       "}"
     ]
   },
-  "bin": [
-    "scripts/install-police-studio.ps1"
-  ],
   "shortcuts": [
     [
       "C:\\Axway-7.7.0\\policystudio\\policystudio.exe",
