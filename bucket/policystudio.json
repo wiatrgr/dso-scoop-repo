@@ -10,7 +10,7 @@
     }
   },
   "bin": [
-    "scripts/install-police-studio.ps1"
+    "scripts/policystudio/install-police-studio.ps1"
   ],
   "checkver": {
     "github": "https://scoop-packages.itsmtaxud.priv/packages/policystudio/"
