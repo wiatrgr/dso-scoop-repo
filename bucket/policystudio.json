@@ -1,53 +1,67 @@
 {
-    "version": "7.7.20240830",
-    "description": "APIGateway Client Tools Installation for Windows",
-    "homepage": "https://docs.axway.com/",
-    "license": "Proprietary",
-    "architecture": {
-        "32bit": {
-            "url": "https://scoop-packages.itsmtaxud.priv/packages/policystudio/APIGateway_7.7.20240830_Client-Tools-Install_win-x86-32_BN04.exe",
-            "hash": "ef748612ebb326822be602a6a1bd1d6419369e2ffcf852c118848a65276260d9"
-        }
-    },
-    "installer": {
-        "script": [
-            "$installer = \"$dir\\APIGateway_7.7.20240830_Client-Tools-Install_win-x86-32_BN04.exe\"",
-            "Start-Process $installer -ArgumentList \"--mode unattended --unattendedmodeui none --enable-components policystudio,configurationstudio\" -Wait",
-            "if (Test-Path \"$dir\\C:\\Axway-7.7.0\\policystudio\\policystudio.exe\") {",
-            "    $exePath = \"$dir\\C:\\Axway-7.7.0\\policystudio\\policystudio.exe\"",
-            "    $scoopAppsFolder = \"C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\"",
-            "    $shortcutPath = \"$scoopAppsFolder\\PolicyStudio.lnk\"",
-            "    $WScriptShell = New-Object -ComObject WScript.Shell",
-            "    $Shortcut = $WScriptShell.CreateShortcut($shortcutPath)",
-            "    $Shortcut.TargetPath = $exePath",
-            "    $Shortcut.Save()",
-            "} else {",
-            "    Write-Host \"Błąd: Plik PolicyStudio.exe nie został znaleziony.\"",
-            "}",
-            "if (Test-Path \"$dir\\C:\\Axway-7.7.0\\configurationstudio\\configurationstudio.exe\") {",
-            "    $exePath = \"$dir\\C:\\Axway-7.7.0\\configurationstudio\\configurationstudio.exe\"",
-            "    $scoopAppsFolder = \"C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\"",
-            "    $shortcutPath = \"$scoopAppsFolder\\ConfigurationStudio.lnk\"",
-            "    $WScriptShell = New-Object -ComObject WScript.Shell",
-            "    $Shortcut = $WScriptShell.CreateShortcut($shortcutPath)",
-            "    $Shortcut.TargetPath = $exePath",
-            "    $Shortcut.Save()",
-            "} else {",
-            "    Write-Host \"Błąd: Plik ConfigurationStudio.exe nie został znaleziony.\"",
-            "}"
-        ]
-    },
-    "bin": [
-        "scripts/install-police-studio.ps1"
-    ],
-    "checkver": {
-        "github": "https://scoop-packages.itsmtaxud.priv/packages/policystudio/"
-    },
-    "autoupdate": {
-        "architecture": {
-            "32bit": {
-                "url": "https://example.com/APIGateway_$version_Client-Tools-Install_win-x86-32_BN04.exe"
-            }
-        }
+  "version": "7.7.20240830",
+  "description": "APIGateway Client Tools Installation for Windows",
+  "homepage": "https://docs.axway.com/",
+  "license": "Proprietary",
+  "architecture": {
+    "32bit": {
+      "url": "https://scoop-packages.itsmtaxud.priv/packages/policystudio/APIGateway_7.7.20240830_Client-Tools-Install_win-x86-32_BN04.exe",
+      "hash": "ef748612ebb326822be602a6a1bd1d6419369e2ffcf852c118848a65276260d9"
     }
+  },
+  "installer": {
+    "script": [
+      "$installDir = \"C:\\Axway-7.7.0\"",
+      "$installer = \"$dir\\APIGateway_7.7.20240830_Client-Tools-Install_win-x86-32_BN04.exe\"",
+      "# Run the installer",
+      "Start-Process $installer -ArgumentList \"--mode unattended --unattendedmodeui none --enable-components policystudio,configurationstudio\" -Wait",
+      "# Check if PolicyStudio.exe exists, and if so, create a shortcut",
+      "if (Test-Path \"$installDir\\policystudio\\policystudio.exe\") {",
+      "    $exePath = \"$installDir\\policystudio\\policystudio.exe\"",
+      "    $scoopAppsFolder = \"C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\"",
+      "    $shortcutPath = \"$scoopAppsFolder\\PolicyStudio.lnk\"",
+      "    $WScriptShell = New-Object -ComObject WScript.Shell",
+      "    $Shortcut = $WScriptShell.CreateShortcut($shortcutPath)",
+      "    $Shortcut.TargetPath = $exePath",
+      "    $Shortcut.Save()",
+      "    Write-Host \"Shortcut for PolicyStudio has been created.\"",
+      "} else {",
+      "    Write-Host \"Error: PolicyStudio.exe was not found.\"",
+      "}",
+      "# Add shortcut for ConfigurationStudio",
+      "if (Test-Path \"$installDir\\configurationstudio\\configurationstudio.exe\") {",
+      "    $exePathConfig = \"$installDir\\configurationstudio\\configurationstudio.exe\"",
+      "    $shortcutPathConfig = \"$scoopAppsFolder\\ConfigurationStudio.lnk\"",
+      "    $ShortcutConfig = $WScriptShell.CreateShortcut($shortcutPathConfig)",
+      "    $ShortcutConfig.TargetPath = $exePathConfig",
+      "    $ShortcutConfig.Save()",
+      "    Write-Host \"Shortcut for ConfigurationStudio has been created.\"",
+      "} else {",
+      "    Write-Host \"Error: ConfigurationStudio.exe was not found.\"",
+      "}"
+    ]
+  },
+  "bin": [
+    "scripts/install-police-studio.ps1"
+  ],
+  "shortcuts": [
+    [
+      "C:\\Axway-7.7.0\\policystudio\\policystudio.exe",
+      "PolicyStudio"
+    ],
+    [
+      "C:\\Axway-7.7.0\\configurationstudio\\configurationstudio.exe",
+      "ConfigurationStudio"
+    ]
+  ],
+  "checkver": {
+    "github": "https://scoop-packages.itsmtaxud.priv/packages/policystudio/"
+  },
+  "autoupdate": {
+    "architecture": {
+      "32bit": {
+        "url": "https://example.com/APIGateway_$version_Client-Tools-Install_win-x86-32_BN04.exe"
+      }
+    }
+  }
 }
