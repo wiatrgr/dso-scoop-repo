@@ -1,0 +1,28 @@
+{
+    "version": "24.3.0.284.2209",
+    "description": "Oracle SQL Developer",
+    "homepage": "https://www.oracle.com/database/sqldeveloper/",
+    "license": {
+        "identifier": "Oracle Free Use License",
+        "url": "https://docs.oracle.com/en/database/oracle/sql-developer/index.html"
+    },
+    "url": "https://scoop-packages.itsmtaxud.priv/packages/sqldeveloper/sqldeveloper-24.3.0.284.2209-x64.zip",
+    "hash": "md5:39ded667fcc4e666265819234c49e70f",
+    "shortcuts": [
+        [
+            "sqldeveloper\\sqldeveloper.exe",
+            "SQL Developer"
+        ]
+    ],
+    "checkver": {
+        "url": "https://scoop-packages.itsmtaxud.priv/packages/sqldeveloper/",
+        "re": "Download sqldeveloper ([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "http://download.oracle.com/otn/java/sqldeveloper/sqldeveloper-$version.zip",
+        "extract_dir": "sqldeveloper",
+        "hash": {
+            "url": "$url.md5"
+        }
+    }
+}

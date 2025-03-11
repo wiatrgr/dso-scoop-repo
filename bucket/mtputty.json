@@ -1,0 +1,25 @@
+{
+    "version": "1.8.0",
+    "description": "mTPutty is a multi-tabbed PuTTY.",
+    "homepage": "https://ttyplus.com/multi-tabbed-putty/",
+    "license": "Freeware",
+    "url": "https://ttyplus.com/download/mtputty_setup.exe",
+    "hash": "C5B9AFAD75DDD8C527503AC3B4D7A97920081C254C54044DF421BD05145AE163",
+    "bin": "mtputty.exe",
+    "shortcuts": [
+        [
+            "mtputty.exe",
+            "mTPutty_"
+        ]
+    ],
+    "persist": [
+        "mtputty.ini"
+    ],
+    "checkver": {
+        "url": "https://ttyplus.com/downloads/",
+        "re": "mTPutty v([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://ttyplus.com/download/mtputty_setup.exe"
+    }
+}
