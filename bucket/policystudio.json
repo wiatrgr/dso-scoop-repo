@@ -75,7 +75,7 @@
   "autoupdate": {
     "architecture": {
       "32bit": {
-        "url": "https://example.com/APIGateway_$version_Client-Tools-Install_win-x86-32_BN04.exe"
+        "url": "https://scoop-packages.itsmtaxud.priv/packages/policystudio/APIGateway_$version_Client-Tools-Install_win-x86-32_BN$version.exe"
       }
     }
   }
