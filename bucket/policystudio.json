@@ -2,7 +2,7 @@
     "version": "7.7.20240830",
     "description": "APIGateway Client Tools Installation for Windows",
     "homepage": "https://docs.axway.com/",
-    "license": "Proprietary",  // Zmieniona na bardziej odpowiednią licencję, ponieważ Axway nie jest na GPL
+    "license": "Proprietary", 
     "architecture": {
         "32bit": {
             "url": "https://scoop-packages.itsmtaxud.priv/packages/policystudio/APIGateway_7.7.20240830_Client-Tools-Install_win-x86-32_BN04.exe",
@@ -10,24 +10,17 @@
         }
     },
     "bin": [
-        {
-            "file": "APIGateway_7.7.20240830_Client-Tools-Install_win-x86-32_BN04.exe",
-            "args": [
-                "--mode", "unattended",
-                "--unattendedmodeui", "none",
-                "--enable-components", "policystudio,configurationstudio"
-            ]
-        }
+        "APIGateway_7.7.20240830_Client-Tools-Install_win-x86-32_BN04.exe --mode unattended --unattendedmodeui none --enable-components policystudio,configurationstudio"
     ],
     "shortcuts": [
-        [
-            "C:\\Axway-7.7.0\\policystudio\\policystudio.exe",
-            "PolicyStudio"
-        ],
-        [
-            "C:\\Axway-7.7.0\\configurationstudio\\configurationstudio.exe",
-            "ConfigurationStudio"
-        ]
+        {
+            "shortcut": "C:\\Axway-7.7.0\\policystudio\\policystudio.exe",
+            "name": "PolicyStudio"
+        },
+        {
+            "shortcut": "C:\\Axway-7.7.0\\configurationstudio\\configurationstudio.exe",
+            "name": "ConfigurationStudio"
+        }
     ],
     "checkver": {
         "github": "https://scoop-packages.itsmtaxud.priv/packages/policystudio/"
