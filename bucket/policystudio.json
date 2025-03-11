@@ -12,16 +12,6 @@
     "bin": [
         "APIGateway_7.7.20240830_Client-Tools-Install_win-x86-32_BN04.exe --mode unattended --unattendedmodeui none --enable-components policystudio,configurationstudio"
     ],
-    "shortcuts": [
-        {
-            "shortcut": "C:\\Axway-7.7.0\\policystudio\\policystudio.exe",
-            "name": "PolicyStudio"
-        },
-        {
-            "shortcut": "C:\\Axway-7.7.0\\configurationstudio\\configurationstudio.exe",
-            "name": "ConfigurationStudio"
-        }
-    ],
     "checkver": {
         "github": "https://scoop-packages.itsmtaxud.priv/packages/policystudio/"
     },
