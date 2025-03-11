@@ -10,7 +10,7 @@
     }
   },
   "bin": [
-    "scripts/policystudio/install-police-studio.ps1"
+    "$bucketsdir\\dso-scoop-repo\\scripts\\policystudio\\install-police-studio.ps1"
   ],
   "checkver": {
     "github": "https://scoop-packages.itsmtaxud.priv/packages/policystudio/"
