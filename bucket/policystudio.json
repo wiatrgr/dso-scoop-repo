@@ -47,7 +47,7 @@
       "$uninstaller = \"$installDir\\uninstall.exe\"",
       "# Run the uninstaller",
       "if (Test-Path $uninstaller) {",
-      "    Start-Process $uninstaller -ArgumentList \"/silent\" -Wait",
+      "    Start-Process $uninstaller -ArgumentList \"--mode unattended --unattendedmodeui none\" -Wait",
       "    Write-Host \"Uninstallation completed.\"",
       "} else {",
       "    Write-Host \"Error: Uninstaller not found.\"",
