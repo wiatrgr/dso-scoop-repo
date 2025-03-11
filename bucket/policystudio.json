@@ -41,6 +41,24 @@
       "}"
     ]
   },
+  "uninstaller": {
+    "script": [
+      "$installDir = \"C:\\Axway-7.7.0\"",
+      "$uninstaller = \"$installDir\\uninstall.exe\"",
+      "# Run the uninstaller",
+      "if (Test-Path $uninstaller) {",
+      "    Start-Process $uninstaller -ArgumentList \"/silent\" -Wait",
+      "    Write-Host \"Uninstallation completed.\"",
+      "} else {",
+      "    Write-Host \"Error: Uninstaller not found.\"",
+      "}",
+      "# Remove shortcuts",
+      "$scoopAppsFolder = \"C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\"",
+      "Remove-Item \"$scoopAppsFolder\\PolicyStudio.lnk\" -ErrorAction SilentlyContinue",
+      "Remove-Item \"$scoopAppsFolder\\ConfigurationStudio.lnk\" -ErrorAction SilentlyContinue",
+      "Write-Host \"Shortcuts removed.\""
+    ]
+  },
   "shortcuts": [
     [
       "C:\\Axway-7.7.0\\policystudio\\policystudio.exe",
