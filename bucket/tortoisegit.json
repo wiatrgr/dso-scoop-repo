@@ -1,5 +1,6 @@
 {
   "version": "2.17.0.2",
+  "description": "TortoiseGit Installation for Windows",
   "homepage": "https://tortoisegit.org/",
   "license": "https://www.gnu.org/licenses/gpl-2.0",
   "architecture": {
@@ -12,32 +13,16 @@
       "hash": "f90d42d5730befcd2680b5cd89c6037be1f3f8f5f459b33f83704883dd561b19"
     }
   },
-  "install": [
-    "Start-Process msiexec.exe -ArgumentList '/i', 'C:\\ścieżka_do_pliku\\TortoiseGit-2.17.0.2-64bit.msi', '/quiet', '/norestart' -Wait"
-  ],
-  "uninstall": [
-    "Start-Process msiexec.exe -ArgumentList '/x', '{01FAC96A-A140-440B-BACE-0318CB99722A}', '/qn' -Wait"
-  ],
-  "bin": [
-    "bin\\TortoiseGitMerge.exe",
-    "bin\\TortoiseGitIDiff.exe",
-    "bin\\TortoiseGitBlame.exe",
-    "bin\\TortoiseGitProc.exe"
-  ],
-  "shortcuts": [
-    [
-      "bin\\TortoiseGitMerge.exe",
-      "TortoiseGitMerge"
-    ],
-    [
-      "bin\\TortoiseGitIDiff.exe",
-      "TortoiseGitIDiff"
-    ],
-    [
-      "bin\\TortoiseGitBlame.exe",
-      "TortoiseGitBlame"
+  "installer": {
+    "script": [
+      "Start-Process msiexec.exe -ArgumentList \"/i\", \"TortoiseGit-2.17.0.2-64bit.msi\", \"/quiet\", \"/norestart\" -Wait"
     ]
-  ],
+  },
+  "uninstaller": {
+    "script": [
+      "Start-Process msiexec.exe -ArgumentList \"/x\", \"{01FAC96A-A140-440B-BACE-0318CB99722A}\", \"/qn\" -Wait"
+    ]
+  },
   "checkver": {
     "url": "https://download.tortoisegit.org/tgit/",
     "regex": "href=\"([\\d.]+)/TortoiseGit-([\\d.]+)-64bit\\.msi\""
