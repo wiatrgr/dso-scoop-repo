@@ -1,55 +1,43 @@
 Windows Registry Editor Version 5.00
 
+[HKEY_CLASSES_ROOT\*\shell\TortoiseGit]
+@="TortoiseGit"
+
+[HKEY_CLASSES_ROOT\*\shell\TortoiseGit\command]
+@="\"C:\\Program Files\\TortoiseGit\\bin\\TortoiseGitProc.exe\" /command:contextmenu \"%1\""
+
 [HKEY_CLASSES_ROOT\Directory\shell\TortoiseGit]
-@="Git &TortoiseGit"
+@="TortoiseGit"
 
 [HKEY_CLASSES_ROOT\Directory\shell\TortoiseGit\command]
-@="\"C:\\Program Files\\TortoiseGit\\bin\\TortoiseGitProc.exe\" /command:log /path:\"%1\""
+@="\"C:\\Program Files\\TortoiseGit\\bin\\TortoiseGitProc.exe\" /command:contextmenu \"%1\""
 
-[HKEY_CLASSES_ROOT\Directory\shell\TortoiseGit\Settings]
+[HKEY_CLASSES_ROOT\Directory\\Background\shell\TortoiseGit]
+@="TortoiseGit"
+
+[HKEY_CLASSES_ROOT\Directory\\Background\shell\TortoiseGit\command]
+@="\"C:\\Program Files\\TortoiseGit\\bin\\TortoiseGitProc.exe\" /command:contextmenu \"%V\""
+
+[HKEY_CLASSES_ROOT\Git\Shell\TortoiseGit]
+@="TortoiseGit"
+
+[HKEY_CLASSES_ROOT\Git\Shell\TortoiseGit\command]
+@="\"C:\\Program Files\\TortoiseGit\\bin\\TortoiseGitProc.exe\" /command:contextmenu \"%1\""
+
+[HKEY_CLASSES_ROOT\SystemFileAssociations\\.git\\shell\TortoiseGit]
+@="TortoiseGit"
+
+[HKEY_CLASSES_ROOT\SystemFileAssociations\\.git\\shell\TortoiseGit\command]
+@="\"C:\\Program Files\\TortoiseGit\\bin\\TortoiseGitProc.exe\" /command:contextmenu \"%1\""
+
+[HKEY_CLASSES_ROOT\Directory\\Background\shell\TortoiseGitSettings]
 @="TortoiseGit Settings"
 
-[HKEY_CLASSES_ROOT\Directory\shell\TortoiseGit\Settings\command]
+[HKEY_CLASSES_ROOT\Directory\\Background\shell\TortoiseGitSettings\command]
 @="\"C:\\Program Files\\TortoiseGit\\bin\\TortoiseGitProc.exe\" /command:settings"
 
-[HKEY_CLASSES_ROOT\Directory\shell\TortoiseGit\Help]
-@="TortoiseGit Help"
+[HKEY_CLASSES_ROOT\Directory\\Background\shell\TortoiseGitReadMe]
+@="TortoiseGit ReadMe"
 
-[HKEY_CLASSES_ROOT\Directory\shell\TortoiseGit\Help\command]
-@="\"C:\\Program Files\\TortoiseGit\\bin\\TortoiseGitProc.exe\" /command:help"
-
-[HKEY_CLASSES_ROOT\Directory\Background\shell\TortoiseGit]
-@="Git &TortoiseGit"
-
-[HKEY_CLASSES_ROOT\Directory\Background\shell\TortoiseGit\command]
-@="\"C:\\Program Files\\TortoiseGit\\bin\\TortoiseGitProc.exe\" /command:log /path:\"%V\""
-
-[HKEY_CLASSES_ROOT\Directory\Background\shell\TortoiseGit\Settings]
-@="TortoiseGit Settings"
-
-[HKEY_CLASSES_ROOT\Directory\Background\shell\TortoiseGit\Settings\command]
-@="\"C:\\Program Files\\TortoiseGit\\bin\\TortoiseGitProc.exe\" /command:settings"
-
-[HKEY_CLASSES_ROOT\Directory\Background\shell\TortoiseGit\Help]
-@="TortoiseGit Help"
-
-[HKEY_CLASSES_ROOT\Directory\Background\shell\TortoiseGit\Help\command]
-@="\"C:\\Program Files\\TortoiseGit\\bin\\TortoiseGitProc.exe\" /command:help"
-
-[HKEY_CLASSES_ROOT\Drive\shell\TortoiseGit]
-@="Git &TortoiseGit"
-
-[HKEY_CLASSES_ROOT\Drive\shell\TortoiseGit\command]
-@="\"C:\\Program Files\\TortoiseGit\\bin\\TortoiseGitProc.exe\" /command:log /path:\"%1\""
-
-[HKEY_CLASSES_ROOT\Drive\shell\TortoiseGit\Settings]
-@="TortoiseGit Settings"
-
-[HKEY_CLASSES_ROOT\Drive\shell\TortoiseGit\Settings\command]
-@="\"C:\\Program Files\\TortoiseGit\\bin\\TortoiseGitProc.exe\" /command:settings"
-
-[HKEY_CLASSES_ROOT\Drive\shell\TortoiseGit\Help]
-@="TortoiseGit Help"
-
-[HKEY_CLASSES_ROOT\Drive\shell\TortoiseGit\Help\command]
-@="\"C:\\Program Files\\TortoiseGit\\bin\\TortoiseGitProc.exe\" /command:help"
+[HKEY_CLASSES_ROOT\Directory\\Background\shell\TortoiseGitReadMe\command]
+@="\"C:\\Program Files\\TortoiseGit\\bin\\TortoiseGitProc.exe\" /command:rtfm"
