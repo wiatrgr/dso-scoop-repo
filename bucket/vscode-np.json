@@ -55,6 +55,10 @@
             "}"
         ]
     },
+    "checkver": {
+    "url": "https://code.visualstudio.com/sha?build=stable",
+    "jsonpath": "$.products[?(@.platform.os == 'win32-x64-archive')].name"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
