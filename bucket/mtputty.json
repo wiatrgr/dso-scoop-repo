@@ -3,8 +3,8 @@
     "description": "mTPutty is a multi-tabbed PuTTY.",
     "homepage": "https://ttyplus.com/multi-tabbed-putty/",
     "license": "Freeware",
-    "url": "https://ttyplus.com/download/mtputty_setup.exe",
-    "hash": "C5B9AFAD75DDD8C527503AC3B4D7A97920081C254C54044DF421BD05145AE163",
+    "url": "https://ttyplus.com/download/mtputty.exe",
+    "hash": "8ABAAB9EB197F196E3C4ADCF9C3E3D62489B7FE9E29349ABFD1D278C73DF5E6D",
     "bin": "mtputty.exe",
     "shortcuts": [
         [
