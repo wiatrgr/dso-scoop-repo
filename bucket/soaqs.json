@@ -9,10 +9,7 @@
             "hash": "50a7cbf9b33e04aaaede2f119ebb7869a954c9551f8626fd6ae103768786d926"
         }
     },
-    "extract_dir": "fmw_12.2.1.4.0_soa_quickstart",
-    "depends": [
-        "openjdk"
-    ],
+    "extract_dir": "fmw_12.2.1.4.0_soa",
     "pre_install": [
         "Copy-Item \"$dir\\..\\soa_quickstart.rsp\" \"$dir\\soa_quickstart.rsp\""
     ],
