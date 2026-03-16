@@ -11,7 +11,7 @@
     },
     "extract_dir": "",
     "pre_install": [
-        "Copy-Item \"$dir\\..\\soa_quickstart.rsp\" \"$dir\\soa_quickstart.rsp\""
+        "Copy-Item "$dir\..\scripts\soaqs\soa_quickstart.rsp" "$dir\soa_quickstart.rsp""
     ],
     "installer": {
         "script": [
