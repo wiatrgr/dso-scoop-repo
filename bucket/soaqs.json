@@ -10,31 +10,28 @@
         }
     },
     "extract_dir": "",
-    "pre_install": [
-        "Copy-Item \"$dir\\\\..\\\\scripts\\\\soaqs\\\\soa_quickstart.rsp\" \"$dir\\\\soa_quickstart.rsp\""
-    ],
     "installer": {
         "script": [
-            "# 1. Silent install SOA QuickStart",
+            "# 1. Find the SOA QuickStart JAR",
             "$jar = Get-ChildItem $dir -Recurse -Filter *.jar | Where-Object { $_.Name -match 'soa_quickstart' } | Select-Object -First 1",
-            "if ($jar) {",
-            "    Write-Host \"Starting silent install...\"",
-            "    & java -jar $jar.FullName -silent -responseFile \"$dir\\soa_quickstart.rsp\"",
-            "} else {",
-            "    Write-Error \"JAR installer not found!\"",
+            "if (-not $jar) {",
+            "    Write-Error 'JAR installer not found!'",
             "    exit 1",
             "}",
-            "",
-            "# 2. Create SOA Domain",
+
+            "# 2. Silent install using bundled RSP",
+            "& java -jar $jar.FullName -silent -responseFile \"$dir\\soa_quickstart.rsp\"",
+
+            "# 3. Create SOA Domain",
             "$MW_HOME = 'C:\\Oracle'",
             "$ORACLE_HOME = Join-Path $MW_HOME 'Middleware'",
             "$DOMAIN_HOME = Join-Path $ORACLE_HOME 'Domains\\soa_domain'",
             "$configCmd = Join-Path $ORACLE_HOME 'oracle_common\\common\\bin\\config.cmd'",
-            "",
-            "if (-not (Test-Path $DOMAIN_HOME)) {",
-            "    New-Item -ItemType Directory -Path $DOMAIN_HOME | Out-Null",
+
+            "if (-not (Test-Path $ORACLE_HOME\\Domains)) {",
+            "    New-Item -ItemType Directory -Path $ORACLE_HOME\\Domains | Out-Null",
             "}",
-            "",
+
             "Write-Host 'Creating SOA Domain...'",
             "& $configCmd -mode=silent -silent_xml \"$ORACLE_HOME\\oracle_common\\common\\templates/wls/soa_quickstart_domain_template.xml\" -domain_home $DOMAIN_HOME -admin_user 'weblogic' -admin_pass 'Welcome1'",
             "Write-Host 'SOA Domain created at ' $DOMAIN_HOME"
