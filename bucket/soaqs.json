@@ -19,23 +19,12 @@
             "    exit 1",
             "}",
             "",
-            "# 2. Silent install using bundled RSP",
+            "# 2. Silent install using bundled RSP (creates Quickstart domain automatically)",
             "& java -jar $jar.FullName -silent -responseFile \"$dir\\soa_quickstart.rsp\"",
             "",
-            "# 3. Create SOA Domain if not already created",
-            "$MW_HOME = 'C:\\Oracle'",
-            "$ORACLE_HOME = Join-Path $MW_HOME 'Middleware'",
-            "$DOMAIN_HOME = Join-Path $ORACLE_HOME 'user_projects\\domains\\soa_quickstart'",
-            "$configCmd = Join-Path $ORACLE_HOME 'oracle_common\\common\\bin\\config.cmd'",
-            "",
-            "if (-not (Test-Path $DOMAIN_HOME)) {",
-            "    New-Item -ItemType Directory -Path $DOMAIN_HOME | Out-Null",
-            "    Write-Host 'Creating SOA Domain...'",
-            "    & $configCmd -mode=silent -silent_xml \"$ORACLE_HOME\\oracle_common\\common\\templates\\wls\\soa_quickstart_domain_template.xml\" -domain_home $DOMAIN_HOME -admin_user 'weblogic' -admin_pass 'Welcome1'",
-            "    Write-Host 'SOA Domain created at ' $DOMAIN_HOME",
-            "} else {",
-            "    Write-Host 'SOA Domain already exists at ' $DOMAIN_HOME",
-            "}"
+            "# 3. Report the domain path",
+            "$DOMAIN_HOME = 'C:\\Oracle\\Middleware_soa\\user_projects\\domains\\soa_quickstart'",
+            "Write-Host 'SOA Domain should now exist at ' $DOMAIN_HOME"
         ]
     },
     "checkver": {
