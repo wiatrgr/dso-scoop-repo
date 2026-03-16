@@ -6,7 +6,7 @@
     "architecture": {
         "64bit": {
             "url": "https://scoop-packages.itsmtaxud.priv/packages/soaqs/V983385-01.zip",
-            "hash": "50a7cbf9b33e04aaaede2f119ebb7869a954c9551f8626fd6ae103768786d926"
+            "hash": "086138bb03422267d97271da353a1d694e2c5acbc4f03b0222fd192878da3f8e"
         }
     },
     "extract_dir": "",
