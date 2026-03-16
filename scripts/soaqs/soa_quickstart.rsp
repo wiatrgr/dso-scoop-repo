@@ -1,0 +1,31 @@
+[ENGINE]
+
+# DO NOT CHANGE THIS.
+Response File Version=1.0.0.0.0
+
+[GENERIC]
+
+# Silent install options
+DECLINE_AUTO_UPDATES=true
+SKIP_SOFTWARE_UPDATES=true
+SPECIFY_DOWNLOAD_LOCATION=false
+AUTO_UPDATES_LOCATION=
+
+# Middleware paths
+MIDDLEWARE_HOME=C:\\Oracle
+ORACLE_HOME=C:\\Oracle\\Middleware
+
+# Components to install
+INSTALL_JDEV=true
+INSTALL_WEBLOGIC=true
+INSTALL_JAVADB=true
+
+# Optional: Ignore system prerequisite checks
+IGNORE_SYS_PREREQS=true
+
+# Optional: wait for installation to finish
+WAIT_FOR_COMPLETION=true
+
+[APPLICATIONS]
+
+[RELATIONSHIPS]
