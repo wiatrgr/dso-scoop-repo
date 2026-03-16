@@ -23,7 +23,7 @@
             "& java -jar $jar.FullName -silent -responseFile \"$dir\\soa_quickstart.rsp\"",
             "",
             "# 3. Report the domain path",
-            "$DOMAIN_HOME = 'C:\\Oracle\\Middleware_soa\\user_projects\\domains\\soa_quickstart'",
+            "$DOMAIN_HOME = 'C:\\Oracle\\Middleware\\user_projects\\domains\\soa_quickstart'",
             "Write-Host 'SOA Domain should now exist at ' $DOMAIN_HOME"
         ]
     },
