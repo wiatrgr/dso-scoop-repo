@@ -21,14 +21,14 @@
             "& java -jar $jar.FullName -silent -responseFile \"$dir\\soa_quickstart.rsp\"",
 
             "# 3. Inform user",
-            "Write-Host '✅ Installation complete.'",
+            "Write-Host 'Installation complete.'",
             "Write-Host 'Use Start Menu -> Oracle SOA QuickStart to run config.cmd or start Admin Server.'"
         ]
     },
     "bin": "wlserver\\common\\bin\\config.cmd",
     "shortcuts": [
-        ["wlserver\\common\\bin\\config.cmd", "Oracle SOA QuickStart Config"],
-        ["user_projects\\domains\\soa_quickstart\\startWebLogic.cmd", "Oracle SOA QuickStart Admin Server"]
+        ["C:\\Oracle\\Middleware\\wlserver\\common\\bin\\config.cmd", "Oracle SOA QuickStart Config"],
+        ["C:\\Oracle\\Middleware\\user_projects\\domains\\soa_quickstart\\startWebLogic.cmd", "Oracle SOA QuickStart Admin Server"]
     ],
     "checkver": {
         "regex": "V([\\d-]+)\\.zip"
