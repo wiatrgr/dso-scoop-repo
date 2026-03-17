@@ -34,8 +34,8 @@
 
             "# Shortcut 2: Admin Server",
             "$shortcut2 = $shell.CreateShortcut($startMenu + '\\Oracle SOA QuickStart Admin Server.lnk')",
-            "$shortcut2.TargetPath = 'C:\\Oracle\\Middleware\\user_projects\\domains\\soa_quickstart\\startWebLogic.cmd'",
-            "$shortcut2.WorkingDirectory = 'C:\\Oracle\\Middleware\\user_projects\\domains\\soa_quickstart'",
+            "$shortcut2.TargetPath = 'C:\\Oracle\\Middleware\\user_projects\\domains\\base_domain\\startWebLogic.cmd'",
+            "$shortcut2.WorkingDirectory = 'C:\\Oracle\\Middleware\\user_projects\\domains\\base_domain'",
             "$shortcut2.Save()",
 
             "# 4. Inform user",
