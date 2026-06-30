@@ -37,20 +37,12 @@
     },
 
     "post_install": [
+        "$src = 'C:\\ProgramData\\scoop\\apps\\oraclejdk8u481\\current\\jre\\lib\\security\\cacerts'",
         "$dst = Join-Path $dir 'jre\\lib\\security\\cacerts'",
 
-        "# find previous Oracle JDK 8 (NOT current, NOT hardcoded)",
-        "$src = Get-ChildItem 'C:\\ProgramData\\scoop\\apps\\oraclejdk8*' -Directory |",
-        "    Where-Object { $_.Name -match 'oraclejdk8u' -and $_.Name -ne 'oraclejdk8u491' } |",
-        "    Sort-Object Name -Descending |",
-        "    ForEach-Object {",
-        "        $p = Join-Path $_.FullName 'jre\\lib\\security\\cacerts'",
-        "        if (Test-Path $p) { $p }",
-        "    } | Select-Object -First 1",
-
-        "if ($src) {",
+        "if (Test-Path $src) {",
         "    Copy-Item $src $dst -Force",
-        "    Write-Host 'Oracle JDK8u491: cacerts copied from previous version'",
+        "    Write-Host 'Oracle JDK8u491: cacerts copied from 8u481'",
         "}"
     ]
 }
