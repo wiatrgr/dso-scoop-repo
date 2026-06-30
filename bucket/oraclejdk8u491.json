@@ -18,22 +18,39 @@
         "JAVA_HOME": "$dir"
     },
 
+    "checkver": {
+        "url": "https://scoop-packages.itsmtaxud.priv/packages/oraclejdk",
+        "useragent": "curl/7",
+        "regex": "JDK Development Kit ([\\d.]+) downloads"
+    },
+
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://scoop-packages.itsmtaxud.priv/packages/oraclejdk/jdk-$version_windows-x64_bin.zip"
+            }
+        },
+        "hash": {
+            "url": "$url.sha256"
+        },
+        "extract_dir": "jdk-$version"
+    },
+
     "post_install": [
         "$dst = Join-Path $dir 'jre\\lib\\security\\cacerts'",
 
-        "# znajdź poprzednią wersję Oracle JDK 8 (NIE current)",
-        "$apps = Get-ChildItem 'C:\\ProgramData\\scoop\\apps\\oraclejdk8*' -Directory |",
-        "    Where-Object { $_.Name -match 'oraclejdk8u\\d+' } |",
-        "    Sort-Object Name -Descending",
+        "# find previous Oracle JDK 8 (NOT current, NOT hardcoded)",
+        "$src = Get-ChildItem 'C:\\ProgramData\\scoop\\apps\\oraclejdk8*' -Directory |",
+        "    Where-Object { $_.Name -match 'oraclejdk8u' -and $_.Name -ne 'oraclejdk8u491' } |",
+        "    Sort-Object Name -Descending |",
+        "    ForEach-Object {",
+        "        $p = Join-Path $_.FullName 'jre\\lib\\security\\cacerts'",
+        "        if (Test-Path $p) { $p }",
+        "    } | Select-Object -First 1",
 
-        "$src = $apps | ForEach-Object {",
-        "    $p = Join-Path $_.FullName 'jre\\lib\\security\\cacerts'",
-        "    if (Test-Path $p) { $p }",
-        "} | Select-Object -First 1",
-
-        "if ($src -and (Test-Path $src)) {",
+        "if ($src) {",
         "    Copy-Item $src $dst -Force",
-        "    Write-Host \"Oracle JDK8: cacerts migrated from previous install\"",
+        "    Write-Host 'Oracle JDK8u491: cacerts copied from previous version'",
         "}"
     ]
 }
