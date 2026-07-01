@@ -14,6 +14,7 @@
     "extract_dir": "jdk1.8.0_491",
 
     "env_add_path": "bin",
+
     "env_set": {
         "JAVA_HOME": "$dir"
     },
@@ -22,22 +23,29 @@
         "$config = 'C:\\ProgramData\\scoop\\java-cacerts-map.json'",
         "$key = 'oraclejdk8u491'",
 
-        "if (!(Test-Path $config)) { Write-Host 'Missing config'; return }",
+        "Write-Host \"Looking up cacerts mapping for $key\"",
+
+        "if (!(Test-Path $config)) { Write-Host 'Config not found'; return }",
 
         "$map = Get-Content $config -Raw | ConvertFrom-Json",
         "$sourceApp = $map.$key",
 
-        "if (!$sourceApp) { Write-Host 'No mapping for key'; return }",
+        "if (!$sourceApp) { Write-Host 'No mapping found'; return }",
 
         "$appRoot = Join-Path 'C:\\ProgramData\\scoop\\apps' $sourceApp",
 
-        "$source = Get-ChildItem $appRoot -Recurse -Filter cacerts -ErrorAction SilentlyContinue | Select-Object -First 1",
+        "Write-Host \"Searching cacerts in $appRoot\"",
 
-        "if (!$source) { Write-Host 'cacerts not found in source'; return }",
+        "$source = Get-ChildItem $appRoot -Recurse -File -ErrorAction SilentlyContinue |",
+        "          Where-Object { $_.FullName -match 'security\\\\cacerts$' } |",
+        "          Select-Object -First 1",
+
+        "if (!$source) { Write-Host 'cacerts not found'; return }",
 
         "$destination = Join-Path $dir 'jre\\lib\\security\\cacerts'",
 
         "Copy-Item $source.FullName $destination -Force",
+
         "Write-Host \"cacerts copied from $($source.FullName)\""
     ]
 }
