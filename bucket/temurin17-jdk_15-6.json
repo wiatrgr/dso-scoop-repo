@@ -1,5 +1,5 @@
 {
-    "description": "Eclipse Temurin 17 with shared cacerts migration",
+    "description": "Eclipse Temurin 17",
     "homepage": "https://adoptium.net",
     "version": "17.0.15-6",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
@@ -14,32 +14,18 @@
     "extract_dir": "jdk-17.0.15+6",
 
     "env_add_path": "bin",
-
     "env_set": {
         "JAVA_HOME": "$dir"
     },
 
     "post_install": [
-        "$config = 'C:\\ProgramData\\scoop\\java-cacerts-map.json'",
-        "$key = 'temurin17'",
+        "$source = Join-Path $dir 'lib\\security\\cacerts'",
 
-        "if (!(Test-Path $config)) { return }",
+        "if (!(Test-Path $source)) {",
+        "    Write-Host 'cacerts not found'",
+        "    return",
+        "}",
 
-        "$map = Get-Content $config -Raw | ConvertFrom-Json",
-        "$sourceApp = $map.$key",
-
-        "if (!$sourceApp) { return }",
-
-        "$appRoot = Join-Path 'C:\\ProgramData\\scoop\\apps' $sourceApp",
-
-        "$source = Join-Path $appRoot 'current\\lib\\security\\cacerts'",
-
-        "if (!(Test-Path $source)) { return }",
-
-        "$destination = Join-Path $dir 'lib\\security\\cacerts'",
-
-        "Copy-Item $source $destination -Force",
-
-        "Write-Host \"cacerts copied from $source\""
+        "Write-Host 'Temurin uses lib\\security\\cacerts - no copy needed'"
     ]
 }
